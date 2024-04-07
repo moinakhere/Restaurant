@@ -120,5 +120,6 @@ form {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(171, 181, 40);
+  text-shadow: none;
   font-weight: 'bold';
 }
