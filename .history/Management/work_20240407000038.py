@@ -1,4 +1,4 @@
-import Management.Management as Management
+import Management
 import pickle
 s=[]
 f=open("password.dat","rb")
