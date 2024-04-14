@@ -31,7 +31,7 @@ if d.isalnum():
 else:
     cur.execute("CREATE DATABASE if not exists rst")
 if d.isalnum():
-    cur.execute("use {}".format(d))
+    cur.execute("USE {}".format(d))
 else:
     cur.execute("USE rst")
 
