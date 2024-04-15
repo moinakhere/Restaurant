@@ -39,7 +39,7 @@ elif en.lower() in "02staff":
         print("Welcome to the Staff Panel")
 
         while True:
-            Management.staff() # type: ignore
+            Management.staff()
             print("Thank you for using the Management System")
             print("Do you want to continue?\n1. Yes\n2. No")
             en = input("Enter your choice:").lower()

@@ -1,5 +1,7 @@
 import Management
 import pickle
+
+import Management.Management
 s=[]
 f=open("password.dat","rb")
 try:
@@ -18,7 +20,7 @@ if en.lower() in "01admin":
 
         while True: 
             print("Welcome to the Admin Panel")
-            Management.admin() # type: ignore
+            Management.Management.admin
             print("Thank you for using the Management System")
             print("Do you want to continue?\n1. Yes\n2. No")
             en = input("Enter your choice:").lower()
@@ -39,7 +41,7 @@ elif en.lower() in "02staff":
         print("Welcome to the Staff Panel")
 
         while True:
-            Management.staff() # type: ignore
+            Management.Management.staff()
             print("Thank you for using the Management System")
             print("Do you want to continue?\n1. Yes\n2. No")
             en = input("Enter your choice:").lower()
