@@ -153,7 +153,7 @@ def selldisp():
                 "%15s" % (Fore.GREEN + (str(i[2]))),
             )
         print("*"*120)    
-        cur.execute("select sum(Sell) from sell where date='{}'".format(datetime.datetime.now().strftime("%Y-%m-%d")))
+        cur.execute("select sum(Sell) where date='{}'".format(datetime.datetime.now().strftime("%Y-%m-%d")))
         r = cur.fetchall()
         print("Today's total sale:",r)
     elif z==2:
