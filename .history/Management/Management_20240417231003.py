@@ -158,8 +158,14 @@ def selldisp():
                 datetime.datetime.now().strftime("%Y-%m-%d")
             )
         )
-        sell_today = cur.fetchall()
-        print("Today's total sale:",sell_today[0][0])
+        r = cur.fetchall()
+        print("Today's total sale:",r)
+        cur.execute(
+            "select sum(Sell) from sell where date='{}'".format(
+                datetime.date.today() - datetime.timedelta(days=1)
+            )
+        )
+        sell_yesterday = cur.fetchall()
     elif z==2:
         cur.execute("SELECT * FROM sell WHERE MONTH(date) = '{}'".format((datetime.datetime.now().month)-1))
         r = cur.fetchall()

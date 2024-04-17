@@ -160,6 +160,18 @@ def selldisp():
         )
         sell_today = cur.fetchall()
         print("Today's total sale:",sell_today[0][0])
+        cur.execute(
+            "select sum(Sell) from sell where date='{}'".format(
+                datetime.date.today() - datetime.timedelta(days=1)
+            )
+        )
+        sell_yesterday = cur.fetchall()
+        if len(sell_yesterday)>0:
+            sell_diff= sell_today[0][0] - sell_yesterday[0][0]
+            print("There is a loss of",((sell_diff/sell_yesterday)*100)
+        
+        if sell_diff>0:
+            print("There is a profit of",((sell_diff/sell_yesterday)*100))
     elif z==2:
         cur.execute("SELECT * FROM sell WHERE MONTH(date) = '{}'".format((datetime.datetime.now().month)-1))
         r = cur.fetchall()
