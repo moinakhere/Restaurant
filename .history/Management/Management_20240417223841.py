@@ -160,6 +160,8 @@ def selldisp():
         )
         r = cur.fetchall()
         print("Today's total sale:",r)
+        cur.execute("select sum(Sell) from sell where date='{}'".format((datetime.datetime.now().strftime("%Y-%m-%d"))))
+        r = cur.fetchall()
     elif z==2:
         cur.execute("SELECT * FROM sell WHERE MONTH(date) = '{}'".format((datetime.datetime.now().month)-1))
         r = cur.fetchall()
