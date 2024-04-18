@@ -168,7 +168,6 @@ def selldisp():
         )
         sell_yesterday = cur.fetchall()
         print("Yesterday's total sale:", sell_yesterday[0][0])
-        #sell = float(sell_today[0][0]) - float(sell_yesterday[0][0])
     elif z==2:
         cur.execute("SELECT * FROM sell WHERE MONTH(date) = '{}'".format((datetime.datetime.now().month)-1))
         r = cur.fetchall()
