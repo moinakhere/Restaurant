@@ -62,3 +62,4 @@ cur.execute(
 conn.commit()
 conn.close()
 print(f"{BrightColor.CYAN}All good to begin with.{BrightColor.OFF}")
+#EOF
