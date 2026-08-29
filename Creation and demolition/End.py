@@ -17,3 +17,4 @@ cur = conn.cursor()
 cur.execute("drop database {}".format(s[3]))
 os.remove("password.dat")
 print("All data have been deleted successfully.")
+#EOF
